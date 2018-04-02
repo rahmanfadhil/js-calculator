@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    #form {
+      border: 1px solid black;
+      padding: 10px;
+      width: 300px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #form input {
+      padding: 5px;
+    }
+    #form input[type="button"]{
+      width: 30px;
+    }
+    #hasil {
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="form">
+    <h1>CALCULATOR</h1>
+    <hr/>
+    <input id="number1" type="number" placeholder="Insert Number" />
+    <input type="button" onclick="tambah()" value="+" />
+    <input type="button" onclick="kali()" value="X" />
+    <input id="number2" type="number" placeholder="Insert Number" />
+    <input type="button" onclick="kurang()" value="-" />
+    <input type="button" onclick="bagi()" value="%" />
+    <hr/>
+    <div id="hasil"></div>
+  </div>
+
+  <script type="text/javascript">
+    const number1 = document.getElementById('number1')
+    const number2 = document.getElementById('number2')
+    const output = document.getElementById('hasil')
+
+    function tambah() {
+      var hasil = Number(number1.value) + Number(number2.value)
+      output.innerHTML = hasil
+    }
+
+    function kurang() {
+      var hasil = Number(number1.value) - Number(number2.value)
+      output.innerHTML = hasil
+    }
+
+    function kali() {
+      var hasil = Number(number1.value) * Number(number2.value)
+      output.innerHTML = hasil
+    }
+
+    function bagi() {
+      var hasil = Number(number1.value) / Number(number2.value)
+      output.innerHTML = hasil
+    }
+  </script>
+</body>
+
+</html>
